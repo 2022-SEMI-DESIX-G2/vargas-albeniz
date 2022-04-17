@@ -1,2 +1,2 @@
-# vargas_albeniz
+# vargas-albeniz
 Labs
