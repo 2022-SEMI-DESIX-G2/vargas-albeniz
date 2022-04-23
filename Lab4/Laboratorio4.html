@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/72a3886d4c.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Laboratorio 4</title>
+</head>
+<body>
+    <section class="hero">
+      <div>
+        <h1>Secuencia Fibonacci</h1>
+        <p>Laboratorio 4</p>
+      </div>     
+    </section>
+    <section class="content">
+      <p class="title">Ingresa un numero:</p>
+      <input class="input-btn" type="number" id="fiboNumber">
+      <button class="btn-hover" onclick="generateFibo()">Generar</button>
+      <div class="cards" id="cards">
+      </div>
+    </section>
+</body>
+<script>
+
+function generateFibo() {
+      let inputValue = document.getElementById("fiboNumber").value; 
+      const number = parseInt(inputValue);
+      let n1 = 0, n2 = 1, nextTerm;
+      const cardsCont = document.getElementById("cards");
+      for (let i = 1; i <= number; i++) {
+          
+          nextTerm = n1 + n2;
+          n1 = n2;
+          n2 = nextTerm;
+          console.log(n1);
+          
+          var card = document.createElement('div');
+          card.id = n1;
+          card.className = 'card';
+          card.innerHTML += `<a class="card__exit" onclick="(alertita(${n1}))""><i class="fa-solid fa-circle-minus"></i></a><p class="card__title">${n1}</p>`;
+
+          cardsCont.appendChild(card);
+          
+      }
+    }
+
+function alertita(eliminarCard){
+  var cardRemove = document.getElementById(eliminarCard);
+  cardRemove.remove();
+}
+
+
+</script>
+</html>
