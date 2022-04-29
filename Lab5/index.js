@@ -2,8 +2,8 @@
     const App = {
         htmlElements: {
             form: document.querySelector('#fibonacci'),
-            input: document.querySelector('#size'),
-            response: document.querySelector('#cards')
+            input: document.querySelector('#inputField'),
+            response: document.querySelector('#response')
         },
         init: () => {
             App.htmlElements.form.addEventListener('submit', App.handlers.onFormSubmit);
@@ -14,12 +14,12 @@
         },
         templates: {
             card: (n) => {
-                return `<div class="card"><p class="card__title">${n}</div>`;
+                return `<div class="card"><a class="card_exit"><i class="fa-solid fa-circle-minus"></i></a><p>${n}</p></div>`;
             }
         },
         handlers: {
             onCardClick: (e) => {
-                if(e.target.className === 'card__exit') {
+                if(e.target.className === 'card_exit') {
                     e.target.remove();
                 }
             },

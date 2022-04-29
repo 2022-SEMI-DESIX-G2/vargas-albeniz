@@ -6,23 +6,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/72a3886d4c.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css">
-    <title>Laboratorio 5</title>
+    <title>Laboratorio #4</title>
 </head>
 <body>
     <section class="hero">
-      <div>
-        <h1>Secuencia Fibonacci</h1>
-        <p>Laboratorio 4</p>
-      </div>     
-    </section>
+        <div>
+          <h1>Secuencia Fibonacci</h1>
+          <p>Laboratorio 4</p>
+        </div>     
+      </section>
     <section class="content">
         <form id="fibonacci">
-            <label class="title" for="size">Ingresa un numero:</label>
-            <input class="input-btn" id="size" type="text">
-            <button class="btn-hover" type="submit">Calcular</button>
+            <label class="title" for="inputField">Cantidad de números de la serie de fibonacci:</label>
+            <br>
+            <input class="textField" id="inputField" type="text">
+            <button class="bttn" type="submit"><i class="fa-solid fa-repeat"></i></button>
         </form>
-      <div class="cards" id="response">
-      </div>
+    </section>
+    <section>
+        <div class="cards" id="response"></div>
     </section>
     <script src="utils.js"></script>
     <script src="index.js"></script>
