@@ -14,13 +14,15 @@
         },
         templates: {
             card: (n) => {
-                return `<div class="card"><a class="card_exit"><i class="fa-solid fa-circle-minus"></i></a><p>${n}</p></div>`;
+                return `<div class="card"><a class="card_exit" ><i class="fa-solid fa-circle-minus" id="${n}"></i></a><p>${n}</p></div>`;
             }
         },
         handlers: {
             onCardClick: (e) => {
-                if(e.target.className === 'card_exit') {
-                    e.target.remove();
+                if(e.target.className === 'fa-solid fa-circle-minus') {
+                    const cardExit = e.target.parentNode;
+                    const card = cardExit.parentNode;
+                    card.remove();
                 }
             },
             onFormSubmit: (e) => {
