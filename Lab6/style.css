@@ -1,0 +1,152 @@
+body{
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: #fafafa;
+}
+.hero{
+    background-color: #4158D0;
+    background: linear-gradient(252.25deg, #E83B59 18.55%, #BA345B 97.86%); 
+    width: 100vw;
+    height: 35vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    -webkit-box-shadow: 11px 11px 24px #c1c1c1, -11px -11px 24px #ffffff;
+    box-shadow: 11px 11px 24px #c1c1c1, -11px -11px 24px #ffffff;
+    border-radius: 0% 0% 50% 50%;
+}
+
+.hero h1 {
+    /* Text styles */
+    font-size: 5em;
+    color: white;
+    font-family: 'Recoleta Alt';
+    text-shadow: 0px 4px 2px rgba(0, 0, 0, 0.25);
+    
+    /* Margins */
+    margin-top: 0;
+    margin-left: 40px;
+    margin-bottom: 0.5em;
+} 
+.wrap{
+    display: flex;
+    justify-content: center;
+}
+.section{
+    margin: 3rem;
+    padding: 2rem;    
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+
+.search {
+    width: 120%;
+    position: relative;
+    display: flex;
+  }
+  
+  .searchTerm {
+    width: 100%;
+    border: 3px solid #BA345B;
+    border-right: none;
+    padding: 5px;
+    height: 20px;
+    border-radius: 0 0 0 0;
+    outline: none;
+    color: #9DBFAF;
+  }
+  
+  .searchTerm:focus{
+    color: #BA345B;
+  }
+  
+  .searchButton {
+    width: 45px;
+    height: 36px;
+    border: 1px solid #BA345B;
+    background: #BA345B;
+    text-align: center;
+    color: #fff;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    font-size: 20px;
+  }
+
+  .selectButton {
+    width: 200px;
+    height: 36px;
+    border: 1px solid #BA345B;
+    background: #BA345B;
+    text-align: center;
+    color: #fff;
+    border-radius: 5px 0px 0px 5px;
+    cursor: pointer;
+    font-size: 20px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+  }
+
+
+  .card{
+    position: relative;
+    width: 315px; /* Remove for full width */
+    height: 450px; /* Remove for full width */
+    margin:30px auto;
+    box-shadow: 0 0 100px rgba(0,0,0, .3);
+  }
+  .card-header{
+    position: relative;
+    height: 300px;
+    background-size: cover;
+    background-position: top;
+  }
+
+  .card-body{
+    text-align:center;
+    padding-left: 10px;
+  }
+  
+  .name{
+    font-size: 20px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin: 0 auto;
+  }
+  
+  .type-title{
+    font-size: 14px;
+    font-weight: 300;
+    margin-top: 5px;
+    color: #919191;
+  }
+  
+
+  .stat{
+    box-sizing: border-box;
+    width: calc(100% / 3);
+    float: left;
+    text-align: center;
+    border-left: 1px solid #EBEBEB;
+  }
+  .stat .label{
+    display: block;
+    text-transform: uppercase;
+    font-weight: 300;
+    font-size: 11px;
+    letter-spacing: 1px;
+    color: #95989A;
+  }
+  
+  .stat .value{
+    display: block;
+    font-weight: 700;
+    font-size:20px;
+    margin-top: 5px;
+  }
+
+  
+

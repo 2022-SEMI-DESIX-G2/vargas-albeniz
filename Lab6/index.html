@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Laboratorio #6</title>
+</head>
+<body>
+    <section class="hero">
+        <img src="assest/International_Pokémon_logo.svg.png" alt="" height="200px">
+    </section>
+    <section class="section">
+        <div class="container">
+            <form id="pokemon-finder-form">
+                <div class="wrap">
+                    <div class="search">
+                        <select id="pokemon-finder-search-type" class="selectButton">
+                            <option value="pokemon">Pokemon</option>
+                            <option value="ability">Ability</option>
+                        </select>
+                       <input type="text" class="searchTerm" id="pokemon-finder-query" placeholder="E.g ditto">
+                       <button type="submit" class="searchButton">Go!
+                         <i class="fa fa-search"></i>
+                      </button>
+                    </div>
+                 </div>
+            </form>
+        </div>
+    </section>
+    <section id="pokemon-finder-response">
+            
+    </section>
+    <script src="utils.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>
