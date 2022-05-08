@@ -150,7 +150,7 @@ body {
     transform: translateX(-2rem);
   }
   #second-sprite{
-    transform: translateX(-3rem);
+    transform: translateX(-2rem);
   }
   .second-column{
     display: flex;

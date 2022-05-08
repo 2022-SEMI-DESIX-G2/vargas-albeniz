@@ -14,6 +14,9 @@
         App.handlers.pokemonFinderFormOnSubmit
       );
     },
+    templates:{
+
+    },
     handlers: {
       pokemonFinderFormOnSubmit: async (e) => {
         e.preventDefault();
@@ -25,7 +28,48 @@
             query,
             searchType,
           });
-          App.htmlElements.pokemonFinderOutput.innerHTML = `<div class="card"> <div class="card-header" <div class="card-body"><h2 class="name">${information.name}(${information.id})</h2><h4 class="type-title">Type:${information.types[0].type.name}</h4></div><div class="card-footer"><div class="stats"><div class="stat"><span class="label">Height</span><span class="value">${information.height}</span></div><div class="stat"><span class="label">Weight</span><span class="value">${information.weight}</span></div><div class="stat"><span class="label">ID#</span><span class="value">${information.id}</span></div></div></div></div>`;
+          App.htmlElements.pokemonFinderOutput.innerHTML = `            <div class="card"> 
+          <div class="card-header" >
+              <h2 class="name">${information.name} (${information.id})</h2>
+          </div>
+          <div class="card-body">
+              <div class="first-column">
+                  <h1>Sprites</h1>
+                  <div class="sprites">
+                      <img src="${information.sprites.front_default}" alt="front-sprite">
+                      <img id="second-sprite" src="${information.sprites.back_default}" alt="back-sprite">
+                  </div>
+              </div>
+              <div class="second-column">
+                  <h1>Weight/Height</h1>
+                  <div class="column-content">
+                      <p>${information.weight}/${information.height}</p>
+                  </div>
+              </div>
+          </div>
+          <div class="card-footer">
+              <div class="first-column">
+                  <h1>Evolution chain</h1>
+                  <div id="lists" class="column-content">
+                      <ul>
+                          <li>Pichu</li>
+                          <li>Pikachu</li>
+                          <li>Raichu</li>
+                      </ul>
+                  </div>
+              </div>
+              <div class="second-column">
+                  <h1>Abilities</h1>
+                  <div id="lists" class="column-content">
+                      <ul>
+                          <li>Pichu</li>
+                          <li>Pikachu</li>
+                          <li>Raichu</li>
+                      </ul>
+                  </div>
+              </div>
+          </div>
+      </div>`;
         } catch (error) {
           App.htmlElements.pokemonFinderOutput.innerHTML = `<h1>${error}</h1>`;
         }
