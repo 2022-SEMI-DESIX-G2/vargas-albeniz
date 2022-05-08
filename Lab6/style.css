@@ -1,44 +1,54 @@
-body{
-    margin: 0;
-    font-family: 'Roboto', sans-serif;
-    background-color: #fafafa;
-}
-.hero{
-    background-color: #4158D0;
-    background: linear-gradient(252.25deg, #E83B59 18.55%, #BA345B 97.86%); 
-    width: 100vw;
-    height: 35vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    -webkit-box-shadow: 11px 11px 24px #c1c1c1, -11px -11px 24px #ffffff;
-    box-shadow: 11px 11px 24px #c1c1c1, -11px -11px 24px #ffffff;
-    border-radius: 0% 0% 50% 50%;
+html, body {
+  height: 100%;
 }
 
-.hero h1 {
-    /* Text styles */
-    font-size: 5em;
-    color: white;
-    font-family: 'Recoleta Alt';
-    text-shadow: 0px 4px 2px rgba(0, 0, 0, 0.25);
-    
-    /* Margins */
-    margin-top: 0;
-    margin-left: 40px;
-    margin-bottom: 0.5em;
-} 
+html {
+  display: table;
+  margin: auto;
+}
+
+body {
+  display: table-cell;
+  vertical-align: middle;
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  background-color: #091825;
+}
+
+
 .wrap{
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    background-color: white;
+    margin: 0;
+    padding: 50px;
+    border-radius: 10px;
+
 }
-.section{
+.wrap h1{
+  margin: 0;
+}
+
+#poke-logo{
+  transform: translate(50%,50%);
+}
+.control{
+  display: flex;
+  flex-direction: column;
+}
+.control label{
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  font-size: small;
+}
+.main-section{
     margin: 3rem;
     padding: 2rem;    
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
+    gap: 50px;
 }
 
 
@@ -49,42 +59,34 @@ body{
   }
   
   .searchTerm {
-    width: 100%;
-    border: 3px solid #BA345B;
-    border-right: none;
+    width: 200px;
+    border: none;
     padding: 5px;
     height: 20px;
-    border-radius: 0 0 0 0;
+    border-radius: 10px;
     outline: none;
-    color: #9DBFAF;
+    color: #808080;
+    background-color: #E8E8E8;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    margin-right: 10px;
+ 
   }
   
   .searchTerm:focus{
-    color: #BA345B;
+    color: black;
   }
   
-  .searchButton {
-    width: 45px;
-    height: 36px;
-    border: 1px solid #BA345B;
-    background: #BA345B;
-    text-align: center;
-    color: #fff;
-    border-radius: 0 5px 5px 0;
-    cursor: pointer;
-    font-size: 20px;
-  }
-
   .selectButton {
     width: 200px;
-    height: 36px;
-    border: 1px solid #BA345B;
-    background: #BA345B;
-    text-align: center;
-    color: #fff;
-    border-radius: 5px 0px 0px 5px;
-    cursor: pointer;
-    font-size: 20px;
+    border: none;
+    padding: 5px;
+    height: 30px;
+    border-radius: 10px;
+    outline: none;
+    color: black;
+    background-color: #E8E8E8;
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
@@ -92,22 +94,30 @@ body{
 
 
   .card{
-    position: relative;
-    width: 315px; /* Remove for full width */
-    height: 450px; /* Remove for full width */
-    margin:30px auto;
-    box-shadow: 0 0 100px rgba(0,0,0, .3);
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    margin: 0;
+    padding: 50px;
+    border-radius: 10px;
   }
   .card-header{
     position: relative;
-    height: 300px;
     background-size: cover;
     background-position: top;
   }
 
   .card-body{
+    padding-left: 10px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .card-footer{
     text-align:center;
     padding-left: 10px;
+    display: flex;
+    justify-content: space-between;
   }
   
   .name{
@@ -123,30 +133,52 @@ body{
     margin-top: 5px;
     color: #919191;
   }
-  
 
-  .stat{
-    box-sizing: border-box;
-    width: calc(100% / 3);
-    float: left;
-    text-align: center;
-    border-left: 1px solid #EBEBEB;
-  }
-  .stat .label{
-    display: block;
-    text-transform: uppercase;
-    font-weight: 300;
-    font-size: 11px;
-    letter-spacing: 1px;
-    color: #95989A;
+  .first-column{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-bottom: 0px;
   }
   
-  .stat .value{
-    display: block;
-    font-weight: 700;
-    font-size:20px;
-    margin-top: 5px;
+  .first-column h1{
+    margin-bottom: 0px;
   }
+  .sprites{
+    margin-top: 0px;
+    display: flex;
+    transform: translateX(-2rem);
+  }
+  #second-sprite{
+    transform: translateX(-3rem);
+  }
+  .second-column{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-bottom: 0px;
+  }
+  .second-column h1{
+    margin-bottom: 0px;
+  }
+
+  .column-content{
+    display: flex;
+    font-weight: lighter;
+    justify-content: flex-start;
+    text-align: left;
+    
+  }
+  
+  #lists{
+    transform: translateX(-0.75rem);
+  }
+
+  .column-content li{
+    list-style-type: circle;
+  }
+
+
 
   
 

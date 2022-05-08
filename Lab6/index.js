@@ -25,7 +25,7 @@
             query,
             searchType,
           });
-          App.htmlElements.pokemonFinderOutput.innerHTML = `<div class="card"> <div class="card-header" style="background-image: url(${information.sprites.other.home.front_default})"></div><div class="card-body"><h2 class="name">${information.name}</h2><h4 class="type-title">Type:${information.types[0].type.name}</h4></div><div class="card-footer"><div class="stats"><div class="stat"><span class="label">Height</span><span class="value">${information.height}</span></div><div class="stat"><span class="label">Weight</span><span class="value">${information.weight}</span></div><div class="stat"><span class="label">ID#</span><span class="value">${information.id}</span></div></div></div></div>`;
+          App.htmlElements.pokemonFinderOutput.innerHTML = `<div class="card"> <div class="card-header" <div class="card-body"><h2 class="name">${information.name}(${information.id})</h2><h4 class="type-title">Type:${information.types[0].type.name}</h4></div><div class="card-footer"><div class="stats"><div class="stat"><span class="label">Height</span><span class="value">${information.height}</span></div><div class="stat"><span class="label">Weight</span><span class="value">${information.weight}</span></div><div class="stat"><span class="label">ID#</span><span class="value">${information.id}</span></div></div></div></div>`;
         } catch (error) {
           App.htmlElements.pokemonFinderOutput.innerHTML = `<h1>${error}</h1>`;
         }

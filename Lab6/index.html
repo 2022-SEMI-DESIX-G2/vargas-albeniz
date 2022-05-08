@@ -8,30 +8,75 @@
     <title>Laboratorio #6</title>
 </head>
 <body>
-    <section class="hero">
-        <img src="assest/International_Pokémon_logo.svg.png" alt="" height="200px">
-    </section>
-    <section class="section">
+    <section class="main-section">
         <div class="container">
             <form id="pokemon-finder-form">
+                <img src="assest/pokeapi_logo.png" id="poke-logo" alt="" >
                 <div class="wrap">
+                <h1>Buscador de pokemones</h1>
+                <p>Busca desde pokemones hasta las habilidades de los mismos</p>
                     <div class="search">
-                        <select id="pokemon-finder-search-type" class="selectButton">
-                            <option value="pokemon">Pokemon</option>
-                            <option value="ability">Ability</option>
-                        </select>
-                       <input type="text" class="searchTerm" id="pokemon-finder-query" placeholder="E.g ditto">
-                       <button type="submit" class="searchButton">Go!
-                         <i class="fa fa-search"></i>
-                      </button>
+                       <div class="control">
+                            <label for="">Buscar</label>
+                            <input type="text" class="searchTerm" id="pokemon-finder-query">
+                       </div>
+                       <div class="control">
+                        <label for="pokemon-finder-search-type">Tipo de busqueda</label>
+                            <select id="pokemon-finder-search-type" class="selectButton">
+                                <option value="pokemon">Pokemon</option>
+                                <option value="ability">Ability</option>
+                            </select>
+                       </div>
                     </div>
                  </div>
             </form>
         </div>
+        <section id="pokemon-finder-response">
+            <div class="card"> 
+                <div class="card-header" >
+                    <h2 class="name">Ditto (132)</h2>
+                </div>
+                <div class="card-body">
+                    <div class="first-column">
+                        <h1>Sprites</h1>
+                        <div class="sprites">
+                            <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/132.png" alt="front-sprite">
+                            <img id="second-sprite" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/132.png" alt="back-sprite">
+                        </div>
+                    </div>
+                    <div class="second-column">
+                        <h1>Weight/Height</h1>
+                        <div class="column-content">
+                            <p>40/3</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <div class="first-column">
+                        <h1>Evolution chain</h1>
+                        <div id="lists" class="column-content">
+                            <ul>
+                                <li>Pichu</li>
+                                <li>Pikachu</li>
+                                <li>Raichu</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="second-column">
+                        <h1>Abilities</h1>
+                        <div id="lists" class="column-content">
+                            <ul>
+                                <li>Pichu</li>
+                                <li>Pikachu</li>
+                                <li>Raichu</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </section>
-    <section id="pokemon-finder-response">
-            
-    </section>
+
     <script src="utils.js"></script>
     <script src="index.js"></script>
 </body>
