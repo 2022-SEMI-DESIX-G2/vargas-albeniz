@@ -8,34 +8,30 @@
     <title>Laboratorio #6</title>
 </head>
 <body>
-    <section class="main-section">
+    <section class="hero">
+        <img src="assets/International_Pokémon_logo.svg.png" alt="" height="200px">
+    </section>
+    <section class="section">
         <div class="container">
             <form id="pokemon-finder-form">
-                <img src="assest/pokeapi_logo.png" id="poke-logo" alt="" >
                 <div class="wrap">
-                <h1>Buscador de pokemones</h1>
-                <p>Busca desde pokemones hasta las habilidades de los mismos</p>
                     <div class="search">
-                       <div class="control">
-                            <label for="">Buscar</label>
-                            <input type="text" class="searchTerm" id="pokemon-finder-query">
-                       </div>
-                       <div class="control">
-                        <label for="pokemon-finder-search-type">Tipo de busqueda</label>
-                            <select id="pokemon-finder-search-type" class="selectButton">
-                                <option value="pokemon">Pokemon</option>
-                                <option value="ability">Ability</option>
-                            </select>
-                       </div>
+                        <select id="pokemon-finder-search-type" class="selectButton">
+                            <option value="pokemon">Pokemon</option>
+                            <option value="ability">Ability</option>
+                        </select>
+                       <input type="text" class="searchTerm" id="pokemon-finder-query" placeholder="E.g ditto">
+                       <button type="submit" class="searchButton">Go!
+                         <i class="fa fa-search"></i>
+                      </button>
                     </div>
                  </div>
             </form>
         </div>
-        <section id="pokemon-finder-response">
-
-        </section>
     </section>
-
+    <section  id="pokemon-finder-response">
+            
+    </section>
     <script src="utils.js"></script>
     <script src="index.js"></script>
 </body>
