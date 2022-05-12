@@ -1,0 +1,409 @@
+body{
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: #fafafa;    
+}
+a { text-decoration: none; }
+.hero{
+    background-color: #4158D0;
+    background: linear-gradient(252.25deg, #E83B59 18.55%, #BA345B 97.86%); 
+    width: 100vw;
+    height: 35vh;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    -webkit-box-shadow: 11px 11px 24px #c1c1c1, -11px -11px 24px #ffffff;
+    box-shadow: 11px 11px 24px #c1c1c1, -11px -11px 24px #ffffff;
+    border-radius: 0% 0% 50% 50%;
+}
+
+.hero h1 {
+    /* Text styles */
+    font-size: 5em;
+    color: white;
+    font-family: 'Recoleta Alt';
+    text-shadow: 0px 4px 2px rgba(0, 0, 0, 0.25);
+    
+    /* Margins */
+    margin-top: 0;
+    margin-left: 40px;
+    margin-bottom: 0.5em;
+} 
+.wrap{
+    display: flex;
+    justify-content: center;
+}
+.section{
+    margin: 3rem;
+    padding: 2rem;    
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+
+.search {
+    width: 120%;
+    position: relative;
+    display: flex;
+  }
+  
+  .searchTerm {
+    width: 100%;
+    border: 3px solid #BA345B;
+    border-right: none;
+    padding: 5px;
+    height: 20px;
+    border-radius: 0 0 0 0;
+    outline: none;
+    color: #9DBFAF;
+  }
+  
+  .searchTerm:focus{
+    color: #BA345B;
+  }
+  
+  .searchButton {
+    width: 45px;
+    height: 36px;
+    border: 1px solid #BA345B;
+    background: #BA345B;
+    text-align: center;
+    color: #fff;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    font-size: 20px;
+  }
+
+  .selectButton {
+    width: 200px;
+    height: 36px;
+    border: 1px solid #BA345B;
+    background: #BA345B;
+    text-align: center;
+    color: #fff;
+    border-radius: 5px 0px 0px 5px;
+    cursor: pointer;
+    font-size: 20px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+  }
+#pokemon-finder-response{
+  display: flex;
+
+}
+
+  .card{
+    position: relative;
+    width: 500px; /* Remove for full width */
+    float: left;
+    min-height: 100px;
+    background-color: white;
+    margin:30px auto;
+    box-shadow: 0 0 100px rgba(0,0,0, .3);
+  }
+  .card-header{
+    position: relative;
+    height: 500px;
+    background-size: cover;
+    background-position: top;
+  }
+
+  .card-body{
+    text-align:center;
+    padding-left: 10px;
+  }
+  .card-footer{
+    margin-bottom: 250px ;
+  }
+  ul{
+    text-align: left;
+  }
+  
+  .name{
+    font-size: 20px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin: 0 auto;
+  }
+  
+  .type-title{
+    font-size: 14px;
+    font-weight: 300;
+    margin-top: 5px;
+    color: #919191;
+  }
+  
+
+  .stat{
+    margin-top: 50px;
+    box-sizing: border-box;
+    width: calc(100% / 3);
+    float: left;
+    text-align: center;
+    border-left: 1px solid #EBEBEB;
+  }
+  .stat .label{
+    display: block;
+    text-transform: uppercase;
+    font-weight: 300;
+    font-size: 11px;
+    letter-spacing: 1px;
+    color: #95989A;
+  }
+  
+  .stat .value{
+    display: block;
+    font-weight: 700;
+    font-size:20px;
+    margin-top: 5px;
+  }
+.sprites{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+
+#first-sprite{
+  transform: translateX(5px);
+}
+#second-sprite{
+  transform: translateX(-5px);
+}
+ 
+.type-cont{
+  display: flex;
+  text-align:  center;  
+}
+
+span.grass{
+  background: #78C850; 
+  border-style: solid none; 
+  border-width: 1px; 
+  border-top-color: #C0F860; 
+  border-bottom-color: #588040; 
+  border-radius: 5px; 
+  padding: 0.15em; 
+  font-size: 9pt; 
+  color: #F8F8F8; 
+  text-shadow: 0px 1px 1px #807870;
+}
+span.fire{
+  background: #F08030;
+  border-style: solid none;
+  border-width: 1px;
+  border-top-color: #F8D030;
+  border-bottom-color: #C03028;
+  border-radius: 5px;
+  padding: 0.15em;
+  font-size: 9pt;
+  color: #F8F8F8; 
+  text-shadow: 0px 1px 1px #807870;
+}
+span.normal{
+  background: #A8A878;
+  border-style: solid none; 
+  border-width: 1px;
+  border-top-color: #D8D8D0;
+  border-bottom-color: #705848;
+  border-radius: 5px;
+  padding: 0.15em;
+  font-size: 9pt;
+  color: #F8F8F8;
+  text-shadow: 0px 1px 1px #807870;
+  }
+span.water{
+  background: #6890F0;
+  border-style: solid none;
+  border-width: 1px;
+  border-top-color: #98D8D8;
+  border-bottom-color: #807870;
+  border-radius: 5px;
+  padding: 0.15em;
+  font-size: 9pt;
+  color: #F8F8F8;
+  text-shadow: 0px 1px 1px #807870;
+}
+span.flying{
+  background: #A890F0;
+  border-style: solid none;
+  border-width: 1px;
+  border-top-color: #C8C0F8;
+  border-bottom-color: #705898;
+  border-radius: 5px;
+  padding: 0.15em;
+  font-size: 9pt;
+  color: #F8F8F8;
+  text-shadow: 0px 1px 1px #807870;
+}
+
+span.rock{
+  background: #B8A038;
+  border-style: solid none;
+  border-width: 1px;
+  border-top-color:#E0C068;
+  border-bottom-color: #886830;
+  border-radius: 5px;
+  padding: 0.15em;
+  font-size: 9pt;
+  color: #F8F8F8;
+  text-shadow: 0px 1px 1px #807870;
+}
+
+span.steel{
+  background: #B8B8D0; 
+  border-style: solid none;
+  border-width: 1px;
+  border-top-color: #D8D8C0;
+  border-bottom-color: #807870;
+  border-radius: 5px;
+  padding: 0.15em;
+  font-size: 9pt;
+  color: #F8F8F8;
+  text-shadow: 0px 1px 1px #807870;
+}
+
+span.ground{
+  background: #E0C068;
+  border-style: solid none;
+  border-width: 1px; 
+  border-top-color: #F8F878; 
+  border-bottom-color: #886830; 
+  border-radius: 5px; 
+  padding: 0.15em; 
+  font-size: 9pt; 
+  color: #F8F8F8; 
+  text-shadow: 0px 1px 1px #807870;
+}
+ span.bug{
+  background: #A8B820; 
+  border-style: solid none; 
+  border-width: 1px; 
+  border-top-color: #D8E030; 
+  border-bottom-color: #A8B820; 
+  border-radius: 5px; 
+  padding: 0.15em; 
+  font-size: 9pt; 
+  color: #F8F8F8; 
+  text-shadow: 0px 1px 1px #807870;
+ }
+ span.poison{
+  background: #A040A0; 
+  border-style: solid none; 
+  border-width: 1px; 
+  border-top-color: #D880B8; 
+  border-bottom-color: #483850; 
+  border-radius: 5px; 
+  padding: 0.15em; 
+  font-size: 9pt; 
+  color: #F8F8F8; 
+  text-shadow: 0px 1px 1px #807870;
+ }
+ span.ice{
+  background: #98D8D8; 
+  border-style: solid none; 
+  border-width: 1px; 
+  border-top-color: #D0F8E8; 
+  border-bottom-color: #9090A0; 
+  border-radius: 5px; 
+  padding: 0.15em; 
+  font-size: 9pt; 
+  color: #F8F8F8; 
+  text-shadow: 0px 1px 1px #807870;
+ }
+
+ span.fighting{
+  background: #C03028; 
+  border-style: solid none; 
+  border-width: 1px; 
+  border-top-color: #F08030; 
+  border-bottom-color: #484038; 
+  border-radius: 5px; 
+  padding: 0.15em; 
+  font-size: 9pt; 
+  color: #F8F8F8; 
+  text-shadow: 0px 1px 1px #807870;
+ }
+
+span.psychic{
+  background: #F85888; 
+  border-style: solid none; 
+  border-width: 1px; 
+  border-top-color: #F8C0B0; 
+  border-bottom-color: #789010; 
+  border-radius: 5px; 
+  padding: 0.15em; 
+  font-size: 9pt; 
+  color: #F8F8F8; 
+  text-shadow: 0px 1px 1px #807870;
+}
+span.dark{
+  background: #705848; 
+  border-style: solid none; 
+  border-width: 1px; 
+  border-top-color: #A8A878; 
+  border-bottom-color: #484038; 
+  border-radius: 5px; 
+  padding: 0.15em; 
+  font-size: 9pt; 
+  color: #F8F8F8; 
+  text-shadow: 0px 1px 1px #807870;
+}
+
+span.ghost{
+  background: #705898; 
+  border-style: solid none; 
+  border-width: 1px; 
+  border-top-color: #A890F0; 
+  border-bottom-color: #483850; 
+  border-radius: 5px; 
+  padding: 0.15em; 
+  font-size: 9pt; 
+  color: #F8F8F8; 
+  text-shadow: 0px 1px 1px #807870;
+}
+span.dragon{
+  background: #7038F8; 
+  border-style: solid none; 
+  border-width: 1px; 
+  border-top-color: #B8A0F8; 
+  border-bottom-color: #483890; 
+  border-radius: 5px; 
+  padding: 0.15em; 
+  font-size: 9pt; 
+  color: #F8F8F8; 
+  text-shadow: 0px 1px 1px #807870;
+}
+span.fairy{
+  background: #7038F8; 
+  border-style: solid none; 
+  border-width: 1px; 
+  border-top-color: #B8A0F8; 
+  border-bottom-color: #483890; 
+  border-radius: 5px; 
+  padding: 0.15em; 
+  font-size: 9pt; 
+  color: #F8F8F8;
+  text-shadow: 0px 1px 1px #807870;
+}
+span.electric{
+  background: #F8D030; 
+  border-style: solid none; 
+  border-width: 1px; 
+  border-top-color: #F8F878; 
+  border-bottom-color: #B8A038; 
+  border-radius: 5px; 
+  padding: 0.15em; 
+  font-size: 10pt; 
+  color: #F8F8F8; 
+  text-shadow: 0px 1px 1px #807870;
+  
+}
+
+li {
+  list-style: circle inside url("assets/pokeball.svg");
+  padding-left: 0px;
+  padding-top: 10px;
+}
