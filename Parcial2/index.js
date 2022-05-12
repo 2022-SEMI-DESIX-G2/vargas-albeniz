@@ -29,7 +29,7 @@
 
         const evoList = chain_evolves.map(
           ({name, is_baby}) =>
-          `<li>${name} ${is_baby?'<img class="img-baby" src="./assets/baby.svg" height="15px">':""}</li>`
+          `<li class="li-icons">${name} ${is_baby?'<img class="list-icon" src="./assets/baby.svg" height="15px">':""}</li>`
           )
 
         const typeList = types.map(
@@ -47,8 +47,8 @@
       abilityCard: ({ id, name, pokemon }) => {
         const pokemonList = pokemon.map(
           ({ pokemon, is_hidden }) =>
-            `<li><a target="_blank" href="${pokemon.url}">${pokemon.name}${
-              is_hidden ? `<img class="img-baby" src="./assets/eye.svg" height="15px">` : ""
+            `<li><a>${pokemon.name}${
+              is_hidden ? `<img class="list-icon" src="./assets/eye.svg" height="15px">` : ""
             }</a></li>`
         );
         return ` <div class="card"><div class="card-body"><h1>${name} (${id})</h1><ul>${pokemonList.join("")}</ul></div></div>`;
