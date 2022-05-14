@@ -2,9 +2,7 @@
   const App = {
     htmlElements: {
       pokemonFinderForm: document.querySelector("#pokemon-finder-form"),
-      pokemonFinderSearchType: document.querySelector(
-        "#pokemon-finder-search-type"
-      ),
+      pokemonFinderSearchType: document.querySelector("#pokemon-finder-search-type"),
       pokemonFinderInput: document.querySelector("#pokemon-finder-query"),
       pokemonFinderOutput: document.querySelector("#pokemon-finder-response"),
     },
@@ -62,6 +60,7 @@
         const searchType = App.htmlElements.pokemonFinderSearchType.value;
         
         let query = queryForm.toLowerCase();
+        
         try {
           const response = await Utils.getPokemon({
             query,
