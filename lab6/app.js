@@ -1,5 +1,5 @@
 (function() {
-    const series = 4;
+    const series = 10;
     const fiboArr =[];
     let n1 = 0, n2 = 1, nextTerm;
     for (let i = 1; i <= series; i++) {

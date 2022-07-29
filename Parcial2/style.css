@@ -4,7 +4,9 @@ body{
     font-family: 'Montserrat', sans-serif;
     background-color: #fafafa;    
 }
-
+.logomon{
+  transform: translateY(50px);
+}
 .hero{
     background-color: #4158D0;
     background: linear-gradient(252.25deg, #E83B59 18.55%, #BA345B 97.86%); 
@@ -12,7 +14,6 @@ body{
     height: 35vh;
     display: flex;
     justify-content: center;
-    text-align: center;
     -webkit-box-shadow: 11px 11px 24px #c1c1c1, -11px -11px 24px #ffffff;
     box-shadow: 11px 11px 24px #c1c1c1, -11px -11px 24px #ffffff;
     border-radius: 0% 0% 50% 50%;
